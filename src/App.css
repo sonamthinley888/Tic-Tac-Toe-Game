@@ -1,62 +1,63 @@
+/* Global Styles */
 * {
   box-sizing: border-box;
-  
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  font-family: sans-serif;
+  font-family: "Arial", sans-serif;
   margin: 20px;
   padding: 0;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 10px;
+  font-weight: 600;
 }
 
 h1 {
-  margin-top: 0;
+  font-size: 24px;
+}
+h2 {
   font-size: 22px;
 }
-
-h2 {
-  margin-top: 0;
+h3 {
   font-size: 20px;
 }
-
-h3 {
-  margin-top: 0;
+h4 {
   font-size: 18px;
 }
-
-h4 {
-  margin-top: 0;
+h5 {
   font-size: 16px;
 }
-
-h5 {
-  margin-top: 0;
+h6 {
   font-size: 14px;
 }
 
-h6 {
-  margin-top: 0;
-  font-size: 12px;
-}
-
+/* Code Formatting */
 code {
   font-size: 1.2em;
+  background-color: #eee;
+  padding: 4px 6px;
+  border-radius: 4px;
 }
 
+/* Lists */
 ul {
-  padding-inline-start: 20px;
+  padding-left: 20px;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: sans-serif;
-  margin: 20px;
-  padding: 0;
-}
-
+/* Game Board */
 .square {
   background: #fff;
   border: 1px solid #999;
@@ -64,28 +65,45 @@ body {
   font-size: 24px;
   font-weight: bold;
   line-height: 34px;
-  height: 34px;
-  margin-right: -1px;
-  margin-top: -1px;
-  padding: 0;
+  height: 40px;
+  width: 40px;
+  margin: 2px;
   text-align: center;
-  width: 34px;
+  transition: background 0.3s, transform 0.2s ease-in-out;
+  cursor: pointer;
 }
 
+.square:hover {
+  background: #f1f1f1;
+  transform: scale(1.1);
+}
+
+/* Board Row */
 .board-row:after {
   clear: both;
-  content: '';
+  content: "";
   display: table;
 }
 
+/* Game Status */
 .status {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: bold;
 }
+
+/* Game Container */
 .game {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
 }
 
+/* Game Info */
 .game-info {
   margin-left: 20px;
+  font-size: 16px;
 }
